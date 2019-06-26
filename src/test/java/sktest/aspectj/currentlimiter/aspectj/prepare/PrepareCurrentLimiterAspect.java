@@ -1,13 +1,20 @@
 package sktest.aspectj.currentlimiter.aspectj.prepare;
 
-public class PrepareCurrentLimiterAspect implements Runnable {
+import lombok.extern.slf4j.Slf4j;
+
+import java.util.concurrent.Callable;
+
+@Slf4j
+public class PrepareCurrentLimiterAspect implements Callable<Boolean> {
 
   @Override
-  public void run() {
+  public Boolean call() {
     try {
       new PrepareCurrentLimiter().currentLimiter();
+      return true;
     } catch (Exception e) {
-      e.printStackTrace();
+      log.error(e.getMessage(), e);
+      return false;
     }
   }
 }

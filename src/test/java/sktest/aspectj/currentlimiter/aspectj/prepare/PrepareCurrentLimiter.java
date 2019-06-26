@@ -5,7 +5,7 @@ import org.shaneking.skava.ling.util.Date0;
 
 public class PrepareCurrentLimiter {
 
-  @CurrentLimiter(0)
+  @CurrentLimiter(3)
   public void currentLimiter() {
     System.out.println(Date0.on().dateTime());
   }

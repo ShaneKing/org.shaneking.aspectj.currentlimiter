@@ -19,13 +19,10 @@ public class CurrentLimiterAspect {
 
   @Around("pointcut() && @annotation(currentLimiter)")
   public Object aroundCurrentLimiter(ProceedingJoinPoint joinPoint, CurrentLimiter currentLimiter) throws Throwable {
-    System.out.println("org.shaneking.aspectj.currentlimiter.aspectj.CurrentLimiterAspect.aroundCurrentLimiter");
     String key = joinPoint.getSignature().toLongString();
     if (AtomicLong0.tryDecreaseFailed(initAtomicLong(key, currentLimiter), 0, 1)) {
       try {
         return joinPoint.proceed();
-      } catch (Throwable t) {
-        throw t;
       } finally {
         AtomicLong0.tryIncreaseFailed(CurrentLimiterConstant.BUCKET_MAP.get(key), currentLimiter.value(), 1);
       }
