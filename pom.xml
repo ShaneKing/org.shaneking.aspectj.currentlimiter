@@ -15,7 +15,7 @@
   <packaging>jar</packaging>
 
   <name>AspectJ CurrentLimiter for ShaneKing</name>
-  <description>AspectJ CurrentLimiter for ShaneKing</description>
+  <description>AspectJ CurrentLimiter For ShaneKing</description>
   <url>https://github.com/ShaneKing/org.shaneking.aspectj.currentlimiter</url>
   <inceptionYear>2011-2019</inceptionYear>
 
