@@ -5,7 +5,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.concurrent.Callable;
 
 @Slf4j
-public class PrepareCurrentLimiterAspect implements Callable<Boolean> {
+public class PrepareCurrentLimiterCallable implements Callable<Boolean> {
 
   @Override
   public Boolean call() {

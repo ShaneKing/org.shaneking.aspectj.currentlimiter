@@ -6,7 +6,7 @@
     <include within="org.shaneking.aspectj.currentlimiter.aspectj.CurrentLimiterAspect"/>
     <!--    <include within="org.shaneking.aspectj.currentlimiter.exception.CurrentLimiterException"/>-->
     <include within="sktest.aspectj.currentlimiter.aspectj.prepare.PrepareCurrentLimiter"/>
-    <include within="sktest.aspectj.currentlimiter.aspectj.prepare.PrepareCurrentLimiterAspect"/>
+    <include within="sktest.aspectj.currentlimiter.aspectj.prepare.PrepareCurrentLimiterCallable"/>
     <include within="sktest.aspectj.currentlimiter.aspectj.CurrentLimiterAspectTest"/>
   </weaver>
 </aspectj>

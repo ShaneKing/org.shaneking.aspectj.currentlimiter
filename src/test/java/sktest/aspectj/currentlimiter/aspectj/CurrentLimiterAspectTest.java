@@ -6,7 +6,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import org.shaneking.skava.ling.util.List0;
 import sktest.aspectj.currentlimiter.SKUnit;
-import sktest.aspectj.currentlimiter.aspectj.prepare.PrepareCurrentLimiterAspect;
+import sktest.aspectj.currentlimiter.aspectj.prepare.PrepareCurrentLimiterCallable;
 
 import java.util.List;
 import java.util.concurrent.ExecutorService;
@@ -18,8 +18,8 @@ public class CurrentLimiterAspectTest extends SKUnit {
 
   @Test
   public void around() throws InterruptedException {
-    ExecutorService executorService = Executors.newFixedThreadPool(6);
-    List<Future<Boolean>> rstList = executorService.invokeAll(List0.fillList(Lists.newArrayList(), 10, () -> new PrepareCurrentLimiterAspect()));
+    ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() + 1);
+    List<Future<Boolean>> rstList = executorService.invokeAll(List0.fillList(Lists.newArrayList(), 2 * Runtime.getRuntime().availableProcessors() + 1, () -> new PrepareCurrentLimiterCallable()));
     Assert.assertEquals(3, rstList.parallelStream().filter(future -> {
       try {
         return future.get();
