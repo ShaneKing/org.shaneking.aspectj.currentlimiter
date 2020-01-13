@@ -6,7 +6,7 @@ import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.shaneking.aspectj.currentlimiter.annotation.CurrentLimiter;
 import org.shaneking.aspectj.currentlimiter.exception.CurrentLimiterException;
-import org.shaneking.skava.ling.util.concurrent.atomic.AtomicLong0;
+import org.shaneking.skava.util.concurrent.atomic.AtomicLong0;
 
 import java.util.concurrent.atomic.AtomicLong;
 

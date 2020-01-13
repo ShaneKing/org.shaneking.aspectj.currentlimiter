@@ -4,7 +4,7 @@ import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;
-import org.shaneking.skava.ling.util.List0;
+import org.shaneking.skava.util.List0;
 import sktest.aspectj.currentlimiter.SKUnit;
 import sktest.aspectj.currentlimiter.aspectj.prepare.PrepareCurrentLimiterCallable;
 

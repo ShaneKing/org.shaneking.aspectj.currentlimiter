@@ -1,7 +1,7 @@
 package sktest.aspectj.currentlimiter.aspectj.prepare;
 
 import org.shaneking.aspectj.currentlimiter.annotation.CurrentLimiter;
-import org.shaneking.skava.ling.util.Date0;
+import org.shaneking.skava.util.Date0;
 
 public class PrepareCurrentLimiter {
 
