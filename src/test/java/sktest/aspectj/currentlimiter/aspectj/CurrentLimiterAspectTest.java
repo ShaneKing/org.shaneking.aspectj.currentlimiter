@@ -15,7 +15,6 @@ import java.util.concurrent.Future;
 
 @Slf4j
 public class CurrentLimiterAspectTest extends SKUnit {
-
   @Test
   public void around() throws InterruptedException {
     ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() + 1);

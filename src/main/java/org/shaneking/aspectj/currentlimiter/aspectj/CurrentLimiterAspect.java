@@ -12,7 +12,6 @@ import java.util.concurrent.atomic.AtomicLong;
 
 @Aspect
 public class CurrentLimiterAspect {
-
   @Pointcut("execution(@org.shaneking.aspectj.currentlimiter.annotation.CurrentLimiter * *..*.*(..))")
   private void pointcut() {
   }

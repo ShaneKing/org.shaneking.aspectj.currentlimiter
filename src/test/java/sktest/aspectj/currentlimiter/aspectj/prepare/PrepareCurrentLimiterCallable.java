@@ -6,7 +6,6 @@ import java.util.concurrent.Callable;
 
 @Slf4j
 public class PrepareCurrentLimiterCallable implements Callable<Boolean> {
-
   @Override
   public Boolean call() {
     try {
