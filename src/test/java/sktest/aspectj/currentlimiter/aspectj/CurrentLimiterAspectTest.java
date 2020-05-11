@@ -4,8 +4,8 @@ import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Assert;
 import org.junit.Test;
+import org.shaneking.aspectj.test.SKAspectJUnit;
 import org.shaneking.skava.util.List0;
-import sktest.aspectj.currentlimiter.SKUnit;
 import sktest.aspectj.currentlimiter.aspectj.prepare.PrepareCurrentLimiterCallable;
 
 import java.util.List;
@@ -14,7 +14,7 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.Future;
 
 @Slf4j
-public class CurrentLimiterAspectTest extends SKUnit {
+public class CurrentLimiterAspectTest extends SKAspectJUnit {
   @Test
   public void around() throws InterruptedException {
     ExecutorService executorService = Executors.newFixedThreadPool(Runtime.getRuntime().availableProcessors() + 1);
