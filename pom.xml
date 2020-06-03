@@ -6,7 +6,7 @@
   <parent>
     <groupId>org.shaneking.aspectj</groupId>
     <artifactId>org.shaneking.aspectj</artifactId>
-    <version>0.5.3</version>
+    <version>0.5.4</version>
     <relativePath>../org.shaneking.aspectj</relativePath>
   </parent>
 
@@ -96,14 +96,6 @@
     <dependency>
       <groupId>org.aspectj</groupId>
       <artifactId>aspectjtools</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.projectlombok</groupId>
-      <artifactId>lombok</artifactId>
-    </dependency>
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-api</artifactId>
     </dependency>
     <dependency>
       <groupId>org.shaneking</groupId>
